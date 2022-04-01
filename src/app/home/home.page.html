@@ -1,0 +1,20 @@
+<div class="d-flex flex-column m-4">
+  <h1 class = "text-center">Cigarrômetro</h1>
+  <label for="cigarros" class = "mb-3 mt-2">
+    Quantidade de cigarros por dia:
+  </label>
+  <input type="number" id ="cigarros" [(ngModel)] ="qtdCigarroDia">
+
+  <label for="anos" class = "mb-3 mt-2">
+    Quantidade de anos fumando:
+  </label>
+  <input type="number" id = "anos" [(ngModel)] ="qtdAnosFumando">
+
+  <button class="btn btn-info mt-3"(click) = "calcularTempoVidaPerdido()">
+    Calcular
+  </button>
+
+  <h4 class ="text-center mt-5">Tempo perdido:</h4>
+  <h2 class ="text-center mt-3">{{tempoVidaPeridido}} dia(s)</h2>
+  <div class ="w-{{barra}} h-10 bg-danger"></div>
+</div>
